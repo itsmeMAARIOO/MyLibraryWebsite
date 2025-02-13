@@ -1,0 +1,17 @@
+﻿@using MyLibraryWebsite.Views.ViewModels;
+@{
+    Layout = "~/Views/Shared/MasterLayout.cshtml";
+}
+
+@model List<BookViewModel>
+
+@{
+    var books = Model;
+}
+
+<h1>Books in Library</h1>
+
+@{
+    await Html.RenderPartialAsync("~/Views/Partial/BookCard.cshtml", books);
+}
+

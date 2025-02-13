@@ -1,0 +1,18 @@
+﻿@using MyLibraryWebsite.Views.ViewModels;
+
+@model List<BookViewModel>
+
+<div>
+    @{
+        int num = 1;
+        foreach(var book in @Model)
+        {
+            <h3>Book @num :</h3>
+            <p>Name: @book.Name</p>
+            <p>Author: @book.Author</p>
+            <p>Quantity: @book.Quantity</p>
+            <p>Is Borrowed: @book.IsBorrowed</p>
+            num++;
+        }
+    }
+</div>
